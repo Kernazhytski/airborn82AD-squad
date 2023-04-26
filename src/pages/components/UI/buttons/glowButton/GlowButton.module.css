@@ -1,36 +1,49 @@
+.butHide{
+    transform: translateY(-300px);
+    opacity: 0;
+}
+
 .button {
     width: 200px;
     height: 50px;
     position: absolute;
     top: 250px;
     border-radius: 5px;
-    background: rgba(127, 0, 225);
+    background: rgba(164, 0, 240);
+    transition: 0.2s;
 }
 
 .button:before {
     background: white;
-    width: 500px;
-    content: "lol";
+    content: "";
+    display: inline-block;
+    background: rgba(137, 4, 199);
+    background-image: url("../../../../../assets/pictures/discord.png");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px 0px 0 5px;
+    transition: 0.2s;
 }
 
 .button:hover {
-    animation: glow 1s ease-in-out infinite;
+    width: 240px;
+    height: 60px;
+    animation: fadeIn 0.2s forwards;
+    cursor: pointer;
 }
 
-@keyframes glow {
+.button:hover:before {
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+}
+
+@keyframes fadeIn {
     from {
         box-shadow: 0 0 0px 0px rgba(127, 0, 225, 0.8);
     }
     to {
-        box-shadow: 0 0 20px 10px rgba(127, 0, 225, 0.8);
-    }
-    0% {
-        box-shadow: 0 0 20px 10px rgba(127, 0, 225, 0.8);
-    }
-    50% {
-        box-shadow: 0 0 20px 10px rgba(127, 0, 225, 0.6);
-    }
-    100% {
-        box-shadow: 0 0 20px 10px rgba(127, 0, 225, 0.8);
+        box-shadow: 0 0 20px 5px rgba(127, 0, 225, 0.8);
     }
 }
