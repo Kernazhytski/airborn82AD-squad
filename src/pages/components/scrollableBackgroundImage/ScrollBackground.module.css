@@ -1,0 +1,6 @@
+.con {
+    background-image: url("../../../assets/pictures/Narva_marca2.png");
+    background-position: center;
+    position: sticky;
+    min-height: 100vh;
+}
