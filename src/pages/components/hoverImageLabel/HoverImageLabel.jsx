@@ -19,7 +19,7 @@ const HoverImageLabel = ({imgUrl, title, description}) => {
         <div className={styles.kek} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={styles.con}>
                 <img alt={title} className={styles.imeg} src={imeg}/>
-                <div className={styles.strip}></div>
+
                 <div className={styles.hoverableText}>
                     <p className={styles.titleText}>{title}</p>
                     <p className={styles.descText}>{description}</p>
