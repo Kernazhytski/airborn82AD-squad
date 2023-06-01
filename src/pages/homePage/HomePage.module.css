@@ -1,4 +1,70 @@
 .con{
     max-width: 1500px;
     width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.firstView{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 560px;
+    padding: 40px;
+}
+
+.videoCon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
+
+.discordCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discordBut{
+    background: #2c2c34;
+    content: url("../../assets/pictures/props/buttondisc2.png");
+    width: 200px;
+    border-radius: 20px;
+    transition: 0.3s;
+
+}
+
+.discordBut:hover{
+    animation: fadeIn 0.3s both;
+    width: 225px;
+}
+
+@keyframes fadeIn {
+    from {
+        box-shadow: 0 0 0px 0px rgba(0, 0, 0, 1);
+    }
+    to {
+        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 1);
+    }
+}
+
+.text{
+    font-family: Arial;
+    font-style: italic;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.con2{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: 150px;
 }

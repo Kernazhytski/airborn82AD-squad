@@ -6,13 +6,15 @@ import knopka1 from './strelka.png';
 
 import knopka2 from './strelka2.png'
 import {CSSTransition} from 'react-transition-group';
+import BigPhoto from "../../../bigPhoto/BigPhoto";
 
 
 const CarouselGalery = ({images, height}) => {
 
     const [center, setCenter] = useState(1);
     const [opacity, setOpacity] = useState(1);
-
+    const [active, setActive] = useState(false);
+    const [url, setUrl] = useState();
 
     const buttonLeft = () => {
         if (center === 0) {
@@ -63,21 +65,34 @@ const CarouselGalery = ({images, height}) => {
         };
     }, []);
 
+    const clickPhoto = (url) => {
+        setActive(true);
+        setUrl(url);
+    }
+
     return (
         <div className={styles.wrapper}>
-            <img src={knopka2} onClick={buttonLeft} className={styles.knopka}  />
+            <BigPhoto setActive={setActive} active={active} imageURL={url}/>
+            <img src={knopka2} onClick={buttonLeft} className={styles.knopka}/>
             {
-                windowWidth>425&&
-            <img src={images[center === 0 ? images.length - 1 : center - 1].url} className={styles.images}
-                 style={{opacity: opacity,display:windowWidth>425?"block":"none"}}/>
+                windowWidth > 425 &&
+                <img src={images[center === 0 ? images.length - 1 : center - 1].url} className={styles.images}
+                     style={{opacity: opacity, display: windowWidth > 425 ? "block" : "none"}}
+                     onClick={event => {
+                         clickPhoto(images[center === 0 ? images.length - 1 : center - 1].url);
+                     }}/>
             }
-            <img src={images[center].url} className={styles.images} style={{opacity: opacity}}/>
+            <img src={images[center].url} className={styles.images} style={{opacity: opacity}} onClick={event => {
+                clickPhoto(images[center].url);
+            }}/>
             {
-                windowWidth>425&&
-            <img src={images[center === images.length - 1 ? 0 : center + 1].url} className={styles.images}
-                 style={{opacity: opacity,display:windowWidth>425?"block":"none"}}/>
+                windowWidth > 425 &&
+                <img src={images[center === images.length - 1 ? 0 : center + 1].url} className={styles.images}
+                     style={{opacity: opacity, display: windowWidth > 425 ? "block" : "none"}} onClick={event => {
+                    clickPhoto(images[center === images.length - 1 ? 0 : center + 1].url);
+                }}/>
             }
-                <img src={knopka1} onClick={buttonRight} className={styles.knopka} />
+            <img src={knopka1} onClick={buttonRight} className={styles.knopka}/>
         </div>
     );
 };

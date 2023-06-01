@@ -1,0 +1,21 @@
+.con{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picOff{
+    scale: 0.1;
+    transition: 0.4s;
+}
+
+.picOn{
+    scale: 1;
+    transition: 0.4s;
+}
