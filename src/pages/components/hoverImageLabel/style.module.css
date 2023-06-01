@@ -1,10 +1,11 @@
 .kek{
     display: flex; /* Устанавливаем контейнеру свойство flex */
     justify-content: center; /* Выравнивание дочерних элементов по центру горизонтали */
-    height: 600px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     background: rgba(0,0,0,0.5);
+    padding-top: 20px;
 }
 
 .con{
@@ -19,67 +20,88 @@
 .imeg{
     position: absolute;
     width: 225px;
-    transform: translateX(0px);
+    transform: translateY(-25px);
     transition: transform 0.7s ease-out;
     z-index: 2;
 }
 
 .kek:hover .imeg{
-    transform: translate(-400px);
-}
-
-.strip{
-    background: white;
-    height: 200px;
-    width: 10px;
-    display: inline-block;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transform: translateX(-360px) translateY(-25px);
 }
 
 .hoverableText{
-    font-family: "Milit";
+    font-family: "Impact";
     position: absolute;
     transform: translateX(100px);
     z-index: 1;
     opacity: 0;
     transition: transform 2s ease-out, opacity 0.5s ease-in-out;
+    font-size: 60px;
+    -webkit-text-stroke: 2px white;
+    color: #00296e;
 }
 
 .kek:hover .hoverableText{
     opacity: 1;
     transform: translateX(100px);
-
-}
-
-.kek:hover .strip{
-    opacity: 1;
 }
 
 .titleText{
-    color: #fff;
-    font-size: 120px;
+    display: block;
     margin: 0;
-    -webkit-text-stroke: 1px red;
-    font-weight: 700;
-    line-height: 0.7;
+    font-weight: 300;
+    line-height: 1;
 }
 .descText{
-    color: #fff;
-    font-size: 80px;
     margin: 0;
-    font-weight: 700;
-    margin: 0;
-    -webkit-text-stroke: 1px red;
-
+    font-weight: 300;
+    line-height: 1;
 }
 
-@keyframes slide-in-right {
-    from {
-        left: 100%;
+@media screen and (max-width:1023px){
+    .imeg{
+        width: 180px;
     }
-    to {
-        left: 0;
+    .hoverableText{
+        font-size: 60px;
+        transition: transform 1s ease-out, opacity 0.5s ease-in-out;
+    }
+    .kek:hover .imeg{
+        transform: translateX(-250px) translateY(-25px);
+    }
+    .kek:hover .hoverableText{
+        transform: translateX(140px);
+    }
+}
+
+@media screen and (max-width:768px){
+    .imeg{
+        width: 270px;
+    }
+    .hoverableText{
+        font-size: 60px;
+        transition: transform 1s ease-out, opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        text-align: center;
+    }
+    .kek:hover .imeg{
+        transform: translateX(-1000px) translateY(-25px);;
+    }
+    .kek:hover .hoverableText{
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width:620px){
+    .hoverableText{
+        font-size: 40px;
+        -webkit-text-stroke: 1px white;
+    }
+}
+
+@media screen and (max-width:415px){
+    .hoverableText{
+        font-size: 30px;
+        -webkit-text-stroke: 1px white;
     }
 }

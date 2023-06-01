@@ -19,15 +19,13 @@ const HoverImageLabel = ({imgUrl, title, description}) => {
         <div className={styles.kek} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={styles.con}>
                 <img alt={title} className={styles.imeg} src={imeg}/>
-
                 <div className={styles.hoverableText}>
-                    <p className={styles.titleText}>{title}</p>
-                    <p className={styles.descText}>{description}</p>
+                    <p style={{whiteSpace:"pre"}} className={styles.titleText}>{title}</p>
+                    <p style={{whiteSpace:"pre"}} className={styles.descText}>{description}</p>
                 </div>
             </div>
-            <GlowButton>Join Discord</GlowButton>
+            <GlowButton isHovered={isHovered}>Join Discord</GlowButton>
         </div>
-
     );
 };
 

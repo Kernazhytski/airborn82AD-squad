@@ -1,0 +1,22 @@
+.button {
+    font-family: Bahnschrift;
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0;
+}
+
+.con {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.con:hover {
+    opacity: 1;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+

@@ -4,40 +4,57 @@
 }
 
 .button {
-    width: 200px;
-    height: 50px;
+    padding-left: 60px;
+    width: 250px;
+    height: 80px;
     position: absolute;
+    display: inline-flex;
     top: 250px;
-    border-radius: 5px;
-    background: rgba(164, 0, 240);
+    border-radius: 15px;
+    background: rgba(81, 101, 246);
     transition: 0.2s;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: white;
+    font-family: Milit;
+    font-size: 30px;
 }
 
 .button:before {
     background: white;
     content: "";
+    position: absolute;
+    left: 0;
     display: inline-block;
-    background: rgba(137, 4, 199);
+    background: rgba(73, 91, 220);
     background-image: url("../../../../../assets/pictures/discord.png");
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px 0px 0 5px;
+    background-size: 81px 81px;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px 0px 0 15px;
     transition: 0.2s;
 }
 
 .button:hover {
-    width: 240px;
-    height: 60px;
+    padding-left: 80px;
+    font-size: 40px;
+    width: 300px;
+    height: 100px;
     animation: fadeIn 0.2s forwards;
     cursor: pointer;
 }
 
 .button:hover:before {
-    width: 60px;
-    height: 60px;
-    background-size: 60px 60px;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
 }
+
+.button:active{
+    box-shadow: 0 0 0px 0px rgba(127, 0, 225, 0.8);
+}
+
 
 @keyframes fadeIn {
     from {

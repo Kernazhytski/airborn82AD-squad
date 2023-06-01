@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './ScrollBackground.module.css'
 
 const ScrollableBackgroundImage = ({ imageUrl,children }) => {
-    useEffect(() => {
+    /*useEffect(() => {
 
         console.log(window.scrollY)
         console.log(document.documentElement.scrollHeight)
@@ -19,7 +19,7 @@ const ScrollableBackgroundImage = ({ imageUrl,children }) => {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, []);*/
 
     return (
         <div id="image-container"  className={styles.con}>

@@ -1,6 +1,11 @@
 .con {
-    background-image: url("../../../assets/pictures/Narva_marca2.png");
+    background-image: url("../../../assets/pictures/Yeho_ART.png");
     background-position: center;
+    background-size: cover;
     position: sticky;
     min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
 }

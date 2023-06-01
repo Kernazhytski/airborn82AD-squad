@@ -1,6 +1,7 @@
-.wrapper{
-    height: 100%;
-    width: 100%;
+
+
+.con{
+    max-width: 1400px;
 }
 
 @font-face {

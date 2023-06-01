@@ -1,0 +1,15 @@
+.con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    height: 30vw;
+    width: 100%;
+    color: white;
+}
+
+@media screen and (max-width: 425px) {
+    .con {
+        height: 70vw;
+    }
+}
