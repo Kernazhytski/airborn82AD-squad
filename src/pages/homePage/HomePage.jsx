@@ -7,11 +7,9 @@ const HomePage = () => {
     return (
         <div className={styles.con}>
             <div className={styles.firstView}>
-                <div className={styles.videoCon}>
 
-                </div>
                 <div className={styles.discordCon}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ykOEOoBVqc4?autoplay=1"
+                    <iframe className={styles.video} src="https://www.youtube.com/embed/ykOEOoBVqc4?autoplay=1"
                             frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                     <div className={styles.con2}>
                         <div className={styles.discordBut}/>

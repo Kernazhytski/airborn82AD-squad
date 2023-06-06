@@ -5,6 +5,7 @@ import ScrollableBackgroundImage from "./pages/components/scrollableBackgroundIm
 import HomePage from "./pages/homePage/HomePage";
 import Header from "./pages/components/header/Header";
 import img from './assets/pictures/Yeho_ART.png'
+import RulePage from "./pages/rulePage/RulePage";
 
 function App() {
 
@@ -13,17 +14,21 @@ function App() {
         <div className={styles.container}>
             <div className={styles.backgroundImage}/>
             <div className={styles.cameraContainer}>
-                <Header/>
-                <div className={styles.pagesCon}>
-                    <Router>
+
+                <Router>
+                    <Header/>
+                    <div className={styles.pagesCon}>
                         <Routes>
                             <Route path="*" element={<HomePage/>}/>
+                            <Route path="/rules" element={<RulePage/>}/>
                         </Routes>
-                    </Router>
-                </div>
+                    </div>
+                </Router>
+
             </div>
         </div>
-    );
+    )
+        ;
 }
 
 

@@ -13,6 +13,7 @@
     max-width: 1500px;
     width: 98%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .conLogo{
@@ -59,5 +60,25 @@
     display: flex;
     justify-content: center;
 }
+
+.burgerContainer {
+    display: none;
+}
+
+@media screen and (max-width: 1230px){
+    .textLogo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 674px){
+    .conButtons{
+        display: none;
+    }
+    .burgerContainer {
+        display: block;
+    }
+}
+
 
 

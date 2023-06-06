@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Header.module.css'
 import logo from '../../../assets/pictures/logo.png'
 import HeaderButton from "../UI/buttons/headerButton/HeaderButton";
+import HeaderBurger from "../UI/burgers/headerBurger/HeaderBurger";
 
 const Header = () => {
     return (
@@ -14,13 +15,15 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles.conButtons}>
-                    <HeaderButton url={""}>HOME</HeaderButton>
-                    <HeaderButton url={"rules"}>RULES</HeaderButton>
-                    <HeaderButton url={"structure"}>STRUCTURE</HeaderButton>
-                    <HeaderButton url={"donate"}>DONATE</HeaderButton>
-                    <HeaderButton url={"contacts"}>CONTACTS</HeaderButton>
+                    <HeaderButton url={"/"}>HOME</HeaderButton>
+                    <HeaderButton url={"/rules"}>RULES</HeaderButton>
+                    <HeaderButton url={"/structure"}>STRUCTURE</HeaderButton>
+                    <HeaderButton url={"/donate"}>DONATE</HeaderButton>
+                    <HeaderButton url={"/contacts"}>CONTACTS</HeaderButton>
                 </div>
-
+                <div className={styles.burgerContainer}>
+                    <HeaderBurger/>
+                </div>
             </div>
         </div>
     );
